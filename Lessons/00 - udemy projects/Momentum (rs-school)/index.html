@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="assets/favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" href="css/owfont-regular.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>momentum</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="player" id="musicPlay">
+				<div class="player-body">
+					<div class="upper-line">
+						<div class="trackName">
+						</div>
+						<div class="duration">
+							<span class="current-time"></span>
+							<span class="total-time"></span>
+						</div>
+					</div>
+					<div class="bottom-line">
+						<div class="player-btns">
+							<div class="play-prev player-icon"></div>
+							<div class="play player-icon"></div>
+							<div class="pause close player-icon"></div>
+							<div class="play-next player-icon"></div>
+							<div class="volume-on close player-icon"></div>
+							<div class="volume-off player-icon"></div>
+						</div>
+							<input class="timeline-range-input"type="range" min="1" max="100" value="1"></input>
+							<input class="volume-range-input"type="range" min="0" max="100" value="50"></input>
+					</div>
+				</div>
+				<ul class="play-list"></ul>
+			</div>
+			<div>
+				<div class="settings-btns">
+					<div class="flag-gb close"></div>
+					<div class="flag-ru"></div>
+					<div class="pigGameBtn"></div>
+					<div class="gear"></div>
+				</div>
+				<div class="weather" id="weatherMenu">
+					<input type="text" class="city" />
+					<i class="weather-icon owf"></i>
+					<div class="weather-error"></div>
+					<div class="description-container">
+						<span class="temperature"></span>
+						<span class="weather-description"></span>
+					</div>
+					<div class="wind"></div>
+					<div class="humidity"></div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="slider-icons">
+				<div class="slide-prev slider-icon"></div>
+				<div class="slide-next slider-icon"></div>
+			</div>
+			<time class="time" id="showTime"></time>
+			<date class="date" id="showDate"></date>
+			<div class="greeting-container"id="greet">
+				<span class="greeting"></span>
+				<input type="text" class="name"/>
+			</div>
+		</main>
+		<footer class="footer" id="showQuote">
+			<div class="change-quote"></div>
+			<div>
+				<div class="quote"></div>
+				<div class="author"></div>
+			</div>
+		</footer>
+		<section class="game close">
+			<div class="pigGame">
+				<div class="pigGameBody">
+					<div class="g-player g-player--0 g-player--active">
+						<h2 class="g-name" id="name--0">Player 1</h2>
+						<p class="g-score" id="score--0">43</p>
+						<div class="g-current">
+							<p class="g-current-label">Current</p>
+							<p class="g-current-score" id="current--0">0</p>
+						</div>
+					</div>
+					<div class="g-player g-player--1">
+						<h2 class="g-name" id="name--1">Player 2</h2>
+						<p class="g-score" id="score--1">24</p>
+						<div class="g-current">
+          <p class="g-current-label">Current</p>
+          <p class="g-current-score" id="current--1">0</p>
+        </div>
+      </div>
+			
+      <img src="assets/img/dice-1.png" alt="Playing dice" class="g-dice" />
+      <div class="g-btn g-btn--exit">👋 Exit game</div>
+      <div class="g-btn g-btn--new">🔄 New game</div>
+      <div class="g-btn g-btn--roll">🎲 Roll dice</div>
+      <div class="g-btn g-btn--hold">📥 Hold</div>
+    </div>
+	</div>
+</section>
+	<aside class="set close">
+			<div class="closeBtn">&times;</div>
+			<div class="set-body">
+				<form>
+					<span class="setEn">
+						Language:
+					</span>
+					<span class="setRu">
+						Язык:
+					</span>
+					<br>
+					<input type="radio" id="en" name="set_language" value="en">
+					<label for="en"><span class="setEn">
+						En:
+					</span>
+					<span class="setRu">
+						Англ:
+					</span></label><br>
+					<input type="radio" id="ru" name="set_language" value="ru">
+					<label for="ru"><span class="setEn">
+						Ru:
+					</span>
+					<span class="setRu">
+						Рус:
+					</span></label><br>
+				</form>
+				<form>
+					<span class="setEn">Time:</span>
+					<span class="setRu">Время:</span><br>
+					<input type="radio" id="timeOn" name="set_time" value="timeOn">
+					<label for="timeOn"><span class="setEn">
+						On:
+					</span>
+					<span class="setRu">
+						Вкл:
+					</span></label><br>
+					<input type="radio" id="timeOff" name="set_time" value="timeOff">
+					<label for="timeOff"><span class="setEn">
+						Off:
+					</span>
+					<span class="setRu">
+						Выкл:
+					</span></label>
+				</form>
+				<form>
+					<span class="setEn">Date:</span>
+					<span class="setRu">Дата:</span><br>
+					<input type="radio" id="dateOn" name="set_date" value="dateOn">
+					<label for="dateOn"><span class="setEn">
+						On:
+					</span>
+					<span class="setRu">
+						Вкл:
+					</span></label><br>
+					<input type="radio" id="dateOff" name="set_date" value="dateOff">
+					<label for="dateOff"><span class="setEn">
+						Off:
+					</span>
+					<span class="setRu">
+						Выкл:
+					</span></label>
+				</form>
+				<form>
+					<span class="setEn">Greeting:</span>
+					<span class="setRu">Приветствие:</span><br>
+					<input type="radio" id="greetingOn" name="set_greeting" value="greetingOn">
+					<label for="greetingOn"><span class="setEn">
+						On:
+					</span>
+					<span class="setRu">
+						Вкл:
+					</span></label><br>
+					<input type="radio" id="greetingOff" name="set_greeting" value="greetingOff">
+					<label for="greetingOff"><span class="setEn">
+						Off:
+					</span>
+					<span class="setRu">
+						Выкл:
+					</span></label>
+				</form>
+				<form>
+					<span class="setEn">Quote:</span>
+					<span class="setRu">Цитаты:</span><br>
+					<input type="radio" id="quoteOn" name="set_quote" value="quoteOn">
+					<label for="quoteOn"><span class="setEn">
+						On:
+					</span>
+					<span class="setRu">
+						Вкл:
+					</span></label><br>
+					<input type="radio" id="quoteOff" name="set_quote" value="quoteOff">
+					<label for="quoteOff"><span class="setEn">
+						Off:
+					</span>
+					<span class="setRu">
+						Выкл:
+					</span></label>
+				</form>
+				<form>
+					<span class="setEn">Weather:</span>
+					<span class="setRu">Погода:</span><br>
+					<input type="radio" id="weatherOn" name="set_weather" value="weatherOn">
+					<label for="weatherOn"><span class="setEn">
+						On:
+					</span>
+					<span class="setRu">
+						Вкл:
+					</span></label><br>
+					<input type="radio" id="weatherOff" name="set_weather" value="weatherOff">
+					<label for="weatherOff"><span class="setEn">
+						Off:
+					</span>
+					<span class="setRu">
+						Выкл:
+					</span></label>
+				</form>
+				<form>
+					<span class="setEn">Audio:</span>
+					<span class="setRu">Аудио:</span><br>
+					<input type="radio" id="audioOn" name="set_audio" value="audioOn">
+					<label for="audioOn"><span class="setEn">
+						On:
+					</span>
+					<span class="setRu">
+						Вкл:
+					</span></label><br>
+					<input type="radio" id="audioOff" name="set_audio" value="audioOff">
+					<label for="audioOff"><span class="setEn">
+						Off:
+					</span>
+					<span class="setRu">
+						Выкл:
+					</span></label>
+				</form>
+				<form>
+					<span class="setEn">Photo:</span>
+					<span class="setRu">Обои:</span><br>
+					<input type="radio" id="github" name="set_photo" value="github">
+					<label for="github">GitHub</label><br>
+					<input type="radio" id="unsplash" name="set_photo" value="unsplash">
+					<label for="unsplash">Unsplash</label><br>
+					<input type="radio" id="flickr" name="set_photo" value="flickr">
+					<label for="flickr">Flickr</label>
+				</form>
+				<form>
+					<span class="setEn">Tag:</span>
+					<span class="setRu">Тэг:</span>
+					<input type="text" class="imageTag" />
+				</form>
+			</div>
+    </aside>
+    <div class="overlay close"></div>
+		<script type="module" src="js/script.js"></script>
+	</body>
+	</html>
+	
