@@ -1,0 +1,8 @@
+BUILDING A MAZE
+
+1. create a grid of 'cells'
+2. Pick a random staring cell
+3. For that cell, build a randomly-ordered list of neighbors
+4. If a neighbor has been visited before, remove it frm the list
+5. For each remaining neighbor, 'move' to it and remove the wall between those two cells
+6. Repeat for this neighbor
