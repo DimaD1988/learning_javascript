@@ -1,0 +1,7 @@
+1. We neeed to somehow fetch data about movies
+(We should attempt to fench some data about movies from our JS code)
+
+2. We need to build that autocomplete widjet from scratch
+(We should sit down and write out a list of rules that describe how our autocomplete works)
+
+3. This app would be a lot better with some styling + css
