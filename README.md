@@ -1,2 +1,2 @@
-Learning JavaScript, TypeScript, Node.
+Learning JavaScript.
 Coding lessons / exersice ONLY.
